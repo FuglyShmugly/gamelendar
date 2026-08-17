@@ -294,24 +294,24 @@ function showNotableReleases() {
     $currentSection = null;
 
     // We will process the rows in order
-    foreach ($rows as $row) {
+    // foreach ($rows as $row) {
         // Detect if we are in Upcoming or Released section
         // by looking at the previous month header (simple approach)
         
-        $dateCell = $xpath->query('.//td[contains(@class, "table-assignment-body-release-date")]', $row)->item(0);
-        $gameLink = $xpath->query('.//td[contains(@class, "table-assignment-body-game")]//a', $row)->item(0);
+        // $dateCell = $xpath->query('.//td[contains(@class, "table-assignment-body-release-date")]', $row)->item(0);
+        // $gameLink = $xpath->query('.//td[contains(@class, "table-assignment-body-game")]//a', $row)->item(0);
 
-        if (!$dateCell || !$gameLink) continue;
+        // if (!$dateCell || !$gameLink) continue;
 
-        $fullDate = $dateCell->getAttribute('data-sort-value'); // 2026-08-18
-        $title = trim($gameLink->textContent);
-        $href = $gameLink->getAttribute('href');
+        // $fullDate = $dateCell->getAttribute('data-sort-value'); // 2026-08-18
+        // $title = trim($gameLink->textContent);
+        // $href = $gameLink->getAttribute('href');
 
-        if (strpos($href, 'http') !== 0) {
-            $href = 'https://www.pcgamingwiki.com' . $href;
-        }
+        // if (strpos($href, 'http') !== 0) {
+        //     $href = 'https://www.pcgamingwiki.com' . $href;
+        // }
 
-        $niceDate = $fullDate ? date('M j', strtotime($fullDate)) : trim($dateCell->textContent);
+        // $niceDate = $fullDate ? date('M j', strtotime($fullDate)) : trim($dateCell->textContent);
 
         // Optional: Group by Upcoming / Released
         // (We can improve this further if needed)
@@ -413,7 +413,7 @@ if (count($released) > 0) {
 
 echo '</div>';
 
-    }
+
 
 }
 
