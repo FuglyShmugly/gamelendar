@@ -1,5 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
+<!-- 
+ГЕЙЛЕНДАРЬ ЗДЕЛОЛ ФУГЛЯ В 2026 ГОДУ!
+ХВАТИТ ПОДГЛЯДЫВАТЬ! 
+КТО ПРОЧИТАЛ, ТОТ НЕМЫТАЯ ПИПИСЬКА!
+-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
