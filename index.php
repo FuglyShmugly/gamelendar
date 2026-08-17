@@ -161,7 +161,7 @@ $niceDate = $fullDate
  * UPCOMING
  */
 if (count($upcoming) > 0) {
-    echo '<h3>СЛЕДУЮЩИЕ РЕЛИЗЫ</h3>';
+    echo '<h3>ВЫЙДУТ</h3>';
 
     foreach ($upcoming as $item) {
         echo '<div class="release-item">';
@@ -177,7 +177,7 @@ if (count($upcoming) > 0) {
  * RELEASED
  */
 if (count($released) > 0) {
-    echo '<h3>УЖЕ РЕЛИЗНУЛИСЬ</h3>';
+    echo '<h3>ВЫШЛИ</h3>';
 
     foreach ($released as $item) {
         echo '<div class="release-item">';
