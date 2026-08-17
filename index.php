@@ -137,15 +137,16 @@ $months = array(
     11 => 'нояб.',
     12 => 'дек.'
 );
-
+$date = new DateTime($fullDate, new DateTimeZone('UTC'));
 $timestamp = strtotime($fullDate);
-
+$formattedDate = $date->format('Ymd');
 $niceDate = $fullDate
     ? date('j', $timestamp) . ' ' . $months[(int)date('n', $timestamp)]
     : trim($dateCell->textContent);
 
     $item = array(
         'date'  => $niceDate,
+        'googledate' => $formattedDate,
         'title' => $title,
         'href'  => $href
     );
@@ -165,7 +166,7 @@ if (count($upcoming) > 0) {
 
     foreach ($upcoming as $item) {
         echo '<div class="release-item">';
-        echo '<strong>' . htmlspecialchars($item['date']) . '</strong>  ';
+        echo '<strong><a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text='.$item['title'].'&dates='.$item['googledate'].'&details='.$item['href'].'&sf=true&output=xml">' . htmlspecialchars($item['date']) . '</a></strong>  ';
         echo '<a href="' . htmlspecialchars($item['href']) . '" target="_blank" rel="noopener">';
         echo htmlspecialchars($item['title']);
         echo '</a>';
