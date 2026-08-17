@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gamelendar</title>
+    <title>GЕЙМЛЕНДАРЬ</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -161,7 +161,7 @@ $niceDate = $fullDate
  * UPCOMING
  */
 if (count($upcoming) > 0) {
-    echo '<h3>Скоро выйдут</h3>';
+    echo '<h3>СЛЕДУЮЩИЕ РЕЛИЗЫ</h3>';
 
     foreach ($upcoming as $item) {
         echo '<div class="release-item">';
@@ -177,7 +177,7 @@ if (count($upcoming) > 0) {
  * RELEASED
  */
 if (count($released) > 0) {
-    echo '<h3>Вышли</h3>';
+    echo '<h3>УЖЕ РЕЛИЗНУЛИСЬ</h3>';
 
     foreach ($released as $item) {
         echo '<div class="release-item">';
